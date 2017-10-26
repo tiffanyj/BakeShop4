@@ -94,7 +94,14 @@ $(document).ready(function() {
   });
   //Remove the desired item from the shopping cart and local storage
   $('.remove-button').click(function(e) {
-    $(this).closest('tr').remove()
+    $('.remove-button').click(function(e) {
+    var itemName = $(e.target).data('item');
+    var newCart = cart.filter(function(item) { 
+      e.preventDefault();
+      return item.rollName !== itemName;
+    });
+    localStorage.setItem("cart", JSON.stringify(newCart));
+    localStorage.setItem("cartCount", newCart.length);
   });
   //Specify the desired extra flavors in the shopping cart
   function updateCart(flavors) {
