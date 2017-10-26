@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--Defining the character set-->
+<meta charset="UTF-8"> 
+<!--Viewport meta tags make the site work on many devices and resolutions-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <!--Linking to the stylesheet-->
+    <link rel="stylesheet" type="text/css" href="shopStyle.css">
+    <!--Linking to the typefaces-->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway" rel="stylesheet">
+    <!--Adding in a favicon-->
+    <link rel="icon" href="img/bunFavicon.png" type="image/png" sizes="16x16">
+    <!--Enabling JQuery functionality-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Linking to the JavaScript file-->
+    <script src="shoppingCart.js"></script>
+    <!--Defining the website title-->
+    <title>Bun Bun Bake Shop</title>
+  </head>
+  <body>
+    <!--Navigation Links-->
+    <div class="navbar">
+      <a class="siteName" href="index.html">Bun Bun Bake Shop</a>
+      <a href="index.html">About</a>
+      <a href="shop.html">Shop</a>
+      <a href="index.html">Contact</a>
+      <!--Adding the shopping cart-->
+      <div class="navRight">
+        <a href="cart.html"><img class="cartIcon" src="img/cartIcon.png" alt="Shopping Cart"></a>
+        <!--Displaying the number of items in the cart-->
+        <span id="cartCount"></span>
+      </div>
+    </div>
+    <!--Product Information-->
+    <div class="productImage">
+      <img id="roll-image" class="detailsImage" src="img/pumpkinSpice.jpg" alt="Pumpkin Spice Roll">
+    </div>
+    <div data-name="Pumpkin Spice Roll" data-price="3.00"> 
+      <h1 id="product-name" class="productInfo">Pumpkin Spice Roll (1 Count)</h1>
+      <p class="productDescription">Enjoy this seasonal flavor that we specially make just for the month of October and November. The dough is made with pumpkin puree. We add two teaspoons of pumpkin pie spice to the flavor to give it a unique taste. Come in for one of these and grab a warm apple cider to go with it.</p>
+      <!--Pricing and Quantity Details-->
+      <p class="productPrice">Price: $<span id="product-price" class="price-value">3</span>.00</p>
+      <label for"qty-1">Quantity:</label>
+      <input type="text" name="quantity" id="product-qty" class="productQuantity" value="1"></input>
+      <!--Count Options-->
+      <p id="quantity-intro">Please select the desired count:</p>
+      <button id="single" class="quantity-option">1 Count</button>
+      <button id="six" class="quantity-option">6 Count</button>
+      <button id="twelve" class="quantity-option">12 Count</button>
+      <button id="addItem" class="add-cart-item" value="add-to-cart">Add To Cart</button>
+      <!--Extra Flavor Options-->
+      <div id="extra-flavors">
+        <form id="flavors" action="">
+        <input class="first-checkbox-item" type="checkbox" name="caramel-pecan" value="Caramel Pecan">Caramel Pecan</input>
+        <input class="checkbox-item" type="checkbox" name="blackberry" value="Blackberry">Blackberry</input>
+        <input class="checkbox-item" type="checkbox" name="cranberry" value="Cranberry">Cranberry</input>
+        <input class="checkbox-item" type="checkbox" name="birthday-cake" value="Birthday Cake">Birthday Cake</input>
+        <input class="checkbox-item" type="checkbox" name="bacon" value="Bacon">Bacon</input>
+        <input class="checkbox-item" type="checkbox" name="carrot-cake" value="Carrot Cake">Carrot Cake</input>
+        </form>
+      </div>
+    </div>
+  </body>
+  <!--Footer-->
+  <footer>
+    <p class="detailsFooter">Copyright © Bun Bakery 2017</p>
+  </footer>
+</html>

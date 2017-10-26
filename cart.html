@@ -3,6 +3,7 @@
 <meta charset="UTF-8"> 
 <!--Viewport meta tags make the site work on many devices and resolutions-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <html>
   <head>
     <!--Linking to the stylesheet-->
@@ -19,7 +20,7 @@
     <title>Bun Bun Bake Shop</title>
   </head>
   <body>
-    <!--Navigation Link-->
+    <!--Navigation Links-->
     <div class="navbar">
       <a class="siteName" href="index.html">Bun Bun Bake Shop</a>
       <a href="index.html">About</a>
@@ -32,18 +33,33 @@
         <span id="cartCount"></span>
       </div>
     </div>
-    <!--Main Content-->
-    <div class="main">
-      <!--Landing Page Content-->
-      <img class="heroImage" src="img/bakeryInterior.jpg" alt="Photo of Bun Bun Bake Shop">
-      <h1 id="welcome-text" class="heroImage">Welcome to Bun Bun Bake Shop!</h1>
-      <a href="shop.html"><button id="hero-button" class="heroImage">Browse Bakery Items</button></a>
-      <!--Shop Description-->
-      <p>Our bakery has been happily serving up sweets to the people of Pittsburgh for over a decade. We are a small bakery that specializes in cinnamon rolls. Our rolls come in a wide range of artisan flavors from Pumpkin Spice to Maple Apple Bacon. If you're looking for a classic cinnamon roll, we're famous for that too. While our shop is located in Squirrel Hill, Pittsburgh, we ship fresh rolls to anywhere in the USA. The <a class="homepageLink" href="shop.html">online shop</a> reflects what we sell in-store. Keep an eye out for our seasonal offerings like the <a class="homepageLink" href="pumpkinSpice.html">Pumpkin Spice Roll</a>. They are made in limited batches!</p>
+
+    <!--Shopping Cart Information-->
+    <div class="shopGallery">
+      <h1>Preview Shopping Cart</h1>
+      <p>We charge a flat fee of $3.99 for overnight shipping across the United States. Your buns will be fresh upon arrival! If you'd like to save items for later, add them to your wishlist. Visit our contact page if you have any questions.</p>
+      <!--Displaying the total cost-->
+      <p id="cart-total">Your cart total is: $<span id="view-total" class="price-value"></span>.00.</p>
     </div>
-  </body>
-  <!--Footer-->
+
+    <!--Shopping Cart Table-->
+    <form id="shopping-cart" action="cart.html" method="post">
+      <table class="shopping-cart">
+        <thead>
+          <tr>
+            <th class="cart-item-info" scope="col">Bakery Item</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Subtotal</th>
+          </tr>
+        </thead>
+        <tbody id="cart-table"></tbody>
+      </table>
+    </form>
+  </html>
+
+<!--Footer-->
   <footer>
     <p class="footerText">Copyright © Bun Bakery 2017</p>
   </footer>
-</html>
